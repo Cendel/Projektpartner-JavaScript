@@ -44,8 +44,8 @@ export const getProjectsByIds = (project_ids) => {
   }); // OK
 };
 
-export const updateProjectFollowerList = (id, values) => {
-  return axios.put(`${API_URL}/projects/follow/${id}/`, values, {
+export const updateProjectFollowerList = (id) => {
+  return axios.put(`${API_URL}/projects/follow/${id}/`, {
     headers: authHeader(),
   });
 };

@@ -132,7 +132,7 @@ const ProjectDetails = () => {
 
   const handleFollowClick = async () => {
     try {
-      updateProjectFollowerList(project.id, { values: project.followerList });
+      updateProjectFollowerList(project.id);
       setIsFollowing(!isFollowing);
     } catch (err) {
     } finally {

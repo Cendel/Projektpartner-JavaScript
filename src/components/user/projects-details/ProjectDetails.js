@@ -132,12 +132,14 @@ const ProjectDetails = () => {
 
   const handleFollowClick = async () => {
     try {
-      updateProjectFollowerList(project.id);
+      updateProjectFollowerList(project.id, { values: project.followerList });
       setIsFollowing(!isFollowing);
     } catch (err) {
     } finally {
     }
   };
+
+  console.log(project.followerList);
 
   const handleSupportClick = (ada) => {
     const investContainer = document.querySelector(".invest-container");
